@@ -1,0 +1,5 @@
+- name: Create teamcity user
+  user: name=teamcity home=/home/teamcity
+
+- name: Make sure that home dir is created
+  file: path=/home/teamcity/ state=directory owner=teamcity

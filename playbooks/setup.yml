@@ -1,0 +1,9 @@
+- name: Setup TeamCity Agent
+  remote_user: root
+  sudo: no
+  hosts: localhost
+  roles:
+    - { role: java }
+    - { role: user }
+    - { role: teamcity-agent }
+    - { role: dependencies }
