@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chown teamcity:teamcity /data/teamcity-agent -R
+
 su teamcity -c "bash /opt/teamcity-agent/bin/agent.sh start"
 
 if [ $? != 0 ];
