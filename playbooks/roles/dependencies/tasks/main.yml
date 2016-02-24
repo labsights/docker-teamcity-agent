@@ -29,6 +29,7 @@
     - php5-xcache
     - php-pear
     - gettext-base
+    - zip
 
 
 - name: Install NodeJS ppa
