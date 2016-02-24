@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+envsubst < /opt/teamcity-agent/conf/buildAgent.properties.dist > /opt/teamcity-agent/conf/buildAgent.properties
+
+chown teamcity:teamcity /opt/teamcity-agent -R
+
+exec gosu root supervisord -n -c /etc/supervisor/supervisord.conf

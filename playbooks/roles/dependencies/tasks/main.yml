@@ -28,6 +28,7 @@
     - php5-xsl
     - php5-xcache
     - php-pear
+    - gettext-base
 
 
 - name: Install NodeJS ppa
@@ -35,3 +36,13 @@
 
 - name: Install NodeJS
   apt: name=nodejs state=latest update_cache=yes
+
+- name: Install latest npm version
+  shell: npm install -g npm@latest-2
+
+- name: Install gulp
+  shell: npm install -g gulp
+
+- name: Install bower
+  shell: npm install -g bower
+

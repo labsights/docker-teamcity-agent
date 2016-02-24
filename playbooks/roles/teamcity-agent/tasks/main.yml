@@ -3,3 +3,6 @@
 
 - name: Unzip agent sources
   unarchive: src=/tmp/buildAgent.zip dest=/opt/teamcity-agent
+
+- name: Add supervisor config
+  template: src=supervisor-teamcity-agent.conf dest=/etc/supervisor/conf.d/teamcity-agent.conf
