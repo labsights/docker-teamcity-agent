@@ -1,4 +1,4 @@
-FROM labsights/base
+FROM labsights/symfony
 MAINTAINER Sorin <sorin@labsights.com>
 
 VOLUME ["/data/teamcity-agent"]
