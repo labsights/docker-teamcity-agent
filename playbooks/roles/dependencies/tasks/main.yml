@@ -47,3 +47,8 @@
 - name: Install bower
   shell: npm install -g bower
 
+- name: Download rancher-compose
+  unarchive: src="https://github.com/rancher/rancher-compose/releases/download/v0.8.1/rancher-compose-linux-amd64-v0.8.1.tar.gz" dest=/tmp/ copy=no
+
+- name: Move binary and add permissions
+  shell: mv /tmp/rancher-compose-v0.8.1/rancher-compose /usr/local/bin/rancher-compose; chmod +x /usr/local/bin/rancher-compose
