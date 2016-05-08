@@ -3,9 +3,4 @@ set -e
 
 envsubst < /opt/teamcity-agent/conf/buildAgent.properties.dist > /opt/teamcity-agent/conf/buildAgent.properties
 
-chown teamcity:teamcity /opt/teamcity-agent -R
-chown teamcity:teamcity /data/teamcity-agent/ -R
-chown teamcity:teamcity /var/run/docker.sock
-chown teamcity:teamcity /home/teamcity/.docker/config.json && true
-
 exec gosu root supervisord -n -c /etc/supervisor/supervisord.conf
